@@ -1,0 +1,138 @@
+form input {
+  display: block;
+  background-color: var(--claire);
+  border: var(--primaire) 2px solid;
+  outline: 0;
+  padding: 0.8em 1em;
+  border-radius: var(--bordure-rayon);
+  font-family: var(--font-famille-nav);
+  margin: 1em 0;
+  min-width: 30%;
+}
+
+form input:focus {
+  box-shadow: 0 0px 2px;
+
+}
+
+input[type="search"] {
+  background: var(--claire) url(../img/search.svg) no-repeat 5px center;
+  padding-left: 30px;
+}
+
+form button {
+  border: none;
+}
+
+.newletter {
+  border-top: 2px solid var(--bordure-couleur);
+  display: grid;
+  padding-top: 15px;
+  margin-top: 80px;
+}
+
+
+.form-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+}
+
+.trier{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items:center;
+  margin-bottom: 15px;
+  padding: 5px;
+  font-size: 1em;
+}
+
+.trier select{
+  text-align: center;
+  border: black 2px solid;
+  border-radius: 3px;
+}
+
+
+/* --------------------------- formulaire de connexion et d'inscription ------------------*/
+.formCo{
+  justify-items: center;
+  border-top: none;
+  /*background: blueviolet;*/
+
+}
+
+button a{
+  text-decoration: none;
+  color: white;
+}
+
+.inscCo{
+  border: 0.5px solid black;  
+  padding: 100px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align:start; 
+  background-color: white;
+  
+ /* margin-top: 30px; si pas de bck dans le formCO
+  margin-bottom: 30px;*/
+}
+
+.inscCo input{
+  width: 100%;
+}
+
+.selectEnchere{
+  display: block;
+  background-color: var(--claire);
+  border: var(--primaire) 2px solid;
+  outline: 0;
+  padding: 0.8em 1em;
+  border-radius: var(--bordure-rayon);
+  font-family: var(--font-famille-nav);
+  margin: 1em 0;
+  min-width: 20%;
+}
+
+.enchereForm select{
+  margin:0;
+  font-family: var(--font-famille-titre);
+  width: 109%;
+}
+
+.enchereForm form input{
+  margin-top: 0px;
+}
+
+.inscCo {
+ font-family: var(--font-famille-titre);
+ color: black;
+ font-weight: 600;
+}
+
+/******* erreur ****************************/
+
+.error {
+  border-color: red;
+}
+
+/******************** form miser*************/
+.formUn{
+padding: 20px;
+display: flex;
+justify-items: center;
+flex-direction: column;
+}
+
+.formUn >div> button{
+  width: 10%;
+  justify-content: center;
+}
+
+.inputPro{
+  display: block;
+  margin: auto;
+
+}

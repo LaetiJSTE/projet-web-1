@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block main %}
+
+<section class="mes">
+   <h2>Mes timbres</h2>
+   {% for enchere in encheres %}
+   <div>
+    
+         <div class="enchere">
+            <img src="asset/imgBD/{{enchere.img_nom}}" alt="timbre">
+            <h4>{{enchere.tmbe_nom}}</h4>
+            <p>
+            <h5>numeros : {{enchere.tmbe_id}}</h5>
+            Prix : {{enchere.echre_prix}}$ CAD <br>
+            Nombre d'enchère : {{enchere.echre_nombre}}</p>
+            <form action="enchere/supprimeTimbre" method="POST">
+               <input type="hidden" name="tmbe_img" value="{{enchere.img_nom}}">
+               <button class="btn primaire"><a href="enchere/modifie?tmbe_id={{enchere.tmbe_id}}">modifier</a></button>
+               <button class="btn mise" name="id" value="{{enchere.tmbe_id}}" type="submit">supprimer</button>
+            </form>
+            </a>
+    
+      </div>
+
+      {% endfor %}
+
+   </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <base href="{{ constant('BASE_SERVEUR') }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="site de vente de timbre" content="html, css, js, php">
+    <meta author=" laetitia juste - 2194565">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="asset/css/main.css">
+
+    <!-- script -->
+    <script type="module" src="asset/scripts/main.js" defer></script>
+
+    <!-- menu hamburger fafa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8fcbeea4e9.js" crossorigin="anonymous"></script>
+
+    <title>STAMPEE</title>
+</head>
+
+<body>
+
+    <!-- navigation Secondaire-->
+    <header>
+        <a href="accueil/index" class="logo"><img src="asset/img/logoStampee-2.png" alt="logo Stampee"></a>
+        <div class="menu-container">
+            <div class="menu-utilisateur">
+                {% if session.utilisateur %}
+                <div>
+                    {# {{session.utilisateur.uti_nom}} #}
+                    <a href="utilisateur/deconnexion"><img src="asset/img/icons8-déconnexion-50.png"
+                            alt="utilisateur/deconnexion">déconnexion</a>
+                </div>
+                <a href="enchere/nouveau">nouvelle enchere</a>
+
+                {% else %}
+                <a href="utilisateur/nouveau" class="icone__menu"><img src="asset/img/stylo.png"
+                        alt="icone-coeur">Inscription</a>
+
+                <a href="utilisateur/connexion"><img src="asset/img/user.svg" alt="icone-utilisateur">Connexion</a>
+                {% endif %}
+            </div>
+
+
+            <!-- navigation Principale  -->
+            <nav>
+                <ul>
+                    <li><a href="accueil/index">Accueil</a></li>
+                    <li><a href="enchere/tout">Catalogue</a></li>
+                    <li><a href="" class="dropdown">À propos
+                            <div class="dropdown-content">
+                                <p>À propos 1</p>
+                                <p>À propos 2</p>
+                                <p>À propos 3</p>
+                                <p>À propos 4</p>
+                            </div>
+                        </a>
+                    </li>
+
+                    {% if session.utilisateur %}
+                    <li><a href="enchere/mes" >Mon profil</a></li>
+                    <li><a href="#" class="bienvenue"> bienvenue {{session.utilisateur.uti_nom}}</a></li>
+                    {% endif %}
+
+                </ul>
+               
+            </nav>
+        </div>
+
+
+        <!-- Menu hamburger -->
+        <div class="burger__menu">
+            <div id="mySidenav" class="sidenav">
+                <div id="closeBtn" class="close">&times;</div>
+                <ul>
+                    {% if session.utilisateur %}
+                    <div>
+                        {# {{session.utilisateur.uti_nom}} #}
+                     
+                    <li><a href="utilisateur/deconnexion">déconnexion</a></li>
+                    <li><a href="enchere/mes" class="dropdown">Mon profil</a></li>
+
+
+                    {% else %}
+                    
+                    <li><a href="utilisateur/connexion">Connexion</a></li>
+                    <li><a href="utilisateur/nouveau">Inscription</a></li>
+                    {% endif %}
+
+                    <li><a href="accueil/index">Accueil</a></li>
+                    <li><a href="enchere/tout">Catalogue</a></li>
+                    <li><a href="enchere/nouveau">nouvelle enchere</a></li>
+                    <li><a href="#" class="dropdown">À propos
+                            <div class="dropdown-content">
+                                <p>À propos 1</p>
+                                <p>À propos 2</p>
+                                <p>À propos 3</p>
+                                <p>À propos 4</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="openBtn">
+                <span class="burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    {% block main %}{% endblock %}
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <nav>
+                <ul class="navFooter">
+                    <li><a href="#">Devenir membre</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="#">Presse</a></li>
+                    <li><a href="#">Contactez-nous</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+        <div class="copyright">
+            <p>Tous droits réservés &copy; 2022 Stampee </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

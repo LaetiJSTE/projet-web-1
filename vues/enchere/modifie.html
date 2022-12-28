@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block main %}
+
+
+<section class="newletter formCo enchereForm">
+
+    <form class='inscCo' data-js-form action="enchere/modifierTimbre" enctype="multipart/form-data" method="POST">
+
+        <h5 class="form-title">Modification</h5><br>
+        <input type="hidden" name="tmbe_id" value="{{timbre.tmbe_id}}">
+       
+        Nom du timbre<input type="text" name="tmbe_nom" value="{{timbre.tmbe_nom}}" required>
+        Date de création du timbre<input type="text" placeholder="1994" name="tmbe_creation" value="{{timbre.tmbe_creation}}" required>
+        Pays d'origine<input type="text" name="tmbe_pays" value="{{timbre.tmbe_pays}}" required>
+        Couleur<input type="text" name="tmbe_couleurs" value="{{timbre.tmbe_couleurs}}" required>
+
+        État<select name="tmbe_conditions" id="" class="trier selectEnchere" value="{{timbre.img_tmbe_id}}" required>
+            <option value="tres bon">très bon</option>
+            <option value="bon">bon</option>
+            <option value="moyen">moyen</option>
+            <option value="mauvais">mauvais</option>
+        </select><br>
+
+        Dimensions (cm)<input type="text" placeholder="00 x 00 x 00" name="tmbe_dimensions" value="{{timbre.tmbe_dimensions}}" required>
+  
+        Certifié<select name="tmbe_certifie" id="" class="trier selectEnchere" value="{{timbre.tmbe_certifie}}" required>
+            <option value="oui">oui</option>
+            <option value="non">non</option>
+        </select><br>
+
+        <button class="btn primaire">ajouter les modifications</button><br>
+        <span id="erreur" style="color: red;"></span>
+
+    </form>
+
+
+</section>
+
+
+{% endblock %}

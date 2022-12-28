@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+
+<section class="newletter formCo">
+
+    <form class='inscCo' method="post" action="utilisateur/ajouter" data-js-form>
+        <h5 class="form-title">créer un compte</h5>
+            <span id="erreur" style="color: red;"></span>
+                <input type="text" placeholder="Nom" name="uti_nom" id="uti_nom" required>
+                  
+               
+                <input type="text" placeholder="Courriel" name="uti_courriel" id="uti_courriel"data-js-courriel required> 
+                <input type="password" placeholder="Mot de passe" name="uti_mdp" id="uti_mdp" data-js-mdp required>
+                    <span id="errCourriel" style="color: red;"></span>
+
+            <button class="btn primaire" type="submit">s'inscrire</button> <br> <br>
+        <a href="utilisateur/connexion">Se connecter</a>
+    </form>
+
+
+    {% if erreur != '' %}
+    <div class="msg-erreur">{{erreur}}</div>
+    {% endif %}
+
+</section>
+{% endblock %}

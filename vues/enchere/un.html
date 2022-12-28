@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block main %}
+
+<!-- hero principale-->
+<section class="img__hero__ficheProduit imgs__heros">
+   <div>
+      <h2>Fiche Produit</h2>
+      
+</section>
+</div>
+
+<!-- carte produit -->
+<div class="containerProduit resumeTimbre">
+   <div class="carteProduit">
+      <div class="border">
+         <h1>timbre n.{{timbre.tmbe_id}} <i class="fa-regular fa-heart" style="font-size: 30px;"></i></h1><br>
+
+         <!--zoom-->
+         <div id="img-zoomer-box">
+            <img src="asset/imgBD/{{timbre.img_nom}}" alt="timbre" id="img-1">
+            <div id="img-2"></div>
+         </div>
+
+         <h3>
+            Prix : {{timbre.echre_prix}} CAD <br>
+            Nombre d'enchère : {{timbre.echre_nombre}}<br>
+         </h3>
+
+         <!-- texte / descritpion-->
+         <div class="text__timbre">
+            <p style="text-align: center;">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Molestias dolorem harum ratione soluta
+               facere nemo. <br>
+               Quae velit similique, praesentium adipisci tempore corrupti <br> libero sint quod! Odio perferendis
+               architecto ab quam.
+               Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. Nemo animi porro culpa dignissimos
+               maxime
+               repudiandae <br> quo,
+               facilis consequatur. Vero non doloribus corrupti <br> nostrum sequi id sunt ipsa! Quas, incidunt quae!
+            </p>
+        
+         </div>
+
+
+ 
+         <form action="enchere/mise" method="post" class="formUn">
+         
+        <div class="inputPro"><input type="number" name="mise_prix" value="mise_prix" placeholder="miser ici"></input></div> 
+         
+         <input type="hidden" name="tmbe_id" value="{{timbre.tmbe_id}}"></input>
+         <input type="hidden" name="echre_prix" value="{{timbre.echre_prix}}"></input>
+
+        <div><button class="btn mise" type="submit">Miser</button></div> 
+        
+      </form> 
+         </div>
+   </div>
+</div>
+
+<!-- section commentaires-->
+<section>
+   <h2>Commentaires</h2>
+   <div class="containerProduit temoignage">
+      <div>
+         <img src="./asset/img/comment.jpg" alt="laeti">
+      </div>
+      <div>
+         <blockquote>Je n'aime pas les Timbres!Lorem ipsum dolor sit amet, consectetur adipisicing el</blockquote>
+         <h4 class="noMargin">Laetitia Juste</h4>
+      </div>
+   </div>
+
+
+   <div class="containerProduit temoignage">
+      <div>
+         <img src="./asset/img/comment.jpg" alt="Benard">
+      </div>
+      <div>
+         <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptatem harum
+            repudiandae esse
+            <br> laboriosam voluptate magni dolorum sed fugit at id maiores quibusdam magnam distinctio
+         </blockquote>
+         <h4 class="noMargin">Bernard machin</h4>
+      </div>
+   </div>
+
+   <div class="containerProduit temoignage">
+      <div>
+         <img src="./asset/img/comment.jpg" alt="Benard">
+      </div>
+      <div>
+         <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptatem harum
+            repudiandae esse
+         </blockquote>
+         <h4 class="noMargin">Elisabeth Truc</h4>
+      </div>
+   </div> 
+   <div class="interaction__pied">
+      <img class="interaction__pied__image-profil" src="./asset/img/comment.jpg" alt="laeti">
+      <input class="interaction__pied__champ" type="text" placeholder="ajouter un commentaire">
+   </div><br>
+
+   <a href="#">Afficher tous les Commentaires</a>
+</section>
+
+<!-- hero secondaire -->
+<section class="img__gde">
+   <div>
+      <h2>Devenez membre </h2>
+      <button class="btn primaire"><a href="utilisateur/nouveau">inscription</a> </button>
+   </div>
+</section>
+
+<!-- newslettre / formulaire d'Inscription-->
+<section class="newletter">
+   <form data-js-form>
+      <h5 class="form-title">Infoslettre</h5>
+         <span id="erreur" style="color: red;"></span>
+            <input type="text" placeholder="Nom">
+            <input type="tel" placeholder="Prénom">
+            <input type="email" placeholder="courriel">
+         <button class="btn primaire" type="button" >Soumettre</button>
+   </form>
+
+{% endblock %}

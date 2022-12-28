@@ -1,0 +1,63 @@
+.carteCatalogue {
+    display: flex;
+    text-align: center;
+}
+
+body>section>div.containerCatalogue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+
+body>section>div.containerCatalogue>div {
+    max-width: 40ch;
+}
+
+body>section>div img {
+   /*  height: 10rem; */
+    width: 100%;
+    object-fit: cover;
+}
+
+div.carteCatalogue a {
+    background: none;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+div.carteCatalogue a h4 {
+    color: rgb(0, 0, 0);
+}
+
+div.carteCatalogue a:hover {
+    background: none;
+    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+    transform: scale(1.1)
+}
+
+.ResumeTimbre a {
+    width: calc(100% - 40px);
+    min-height: 17.5em;
+    text-align: center;
+}
+
+.ResumeTimbre p {
+    margin-top: 10px;
+    color: #000;
+    font-size: 1rem;
+}
+
+.catalogue {
+    margin-top: 20px;
+}
+
+.carteCatalogue a {
+    color: black
+}

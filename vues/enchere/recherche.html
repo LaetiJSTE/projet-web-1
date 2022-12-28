@@ -1,0 +1,40 @@
+{% extends "base.html" %} 
+{% block main %} 
+
+<!-- hero principale-->
+<section class="img__hero imgs__heros">
+   <div>
+      <h2>Catalogue des produits</h2>
+   </div>
+</section>
+
+  <!-- filtre recherche -->
+<section>
+
+  <!-- catalogue / grille timbre -->
+   <div class="containerCatalogue resumeTimbre">
+
+      {% for timbre in timbres %}
+
+      <div class="carteCatalogue">
+         <a href="enchere/un?tmbe_id={{timbre.tmbe_id}}">
+            <img src="asset/imgBD/{{timbre.img_nom}}" alt="timbre">
+            <h4>{{timbre.tmbe_nom}}</h4>
+            <p> <h5>Lot N {{timbre.tmbe_id}}</h5><br>
+               Prix : {{timbre.echre_prix}}$ CAD <br>
+               Nombre d'enchère : {{timbre.echre_nombre}}</p>
+            <button class="btn primaire">Plus d'information</button>
+            <input type="hidden" name="tmbe_id" value="{{timbre.tmbe_id}}">
+         </a>
+     </div>
+
+
+     {% endfor %} 
+      
+   </div>
+</section>
+
+
+
+</section>
+{% endblock %} 

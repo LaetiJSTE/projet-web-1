@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block main %}
+
+<!-- hero principale-->
+<section class="img__hero__accueil imgs__heros">
+    <div>
+        <h2>Bienvenue sur Stampee</h2>
+        Site de vente de timbre depuis <strong>1504</strong>
+</section>
+</div>
+
+
+<!-- galerie d'offre -->
+<section>
+    <h2>Offres en cours</h2>
+    <div class="galerie mx-w">
+
+        <div class="text_img">
+            <img src="asset/img/lgbtTimbre.jpg" alt="timbre">
+            <div class="texte">
+                <p>LOT 1058</p>
+            </div>
+        </div>
+
+        <div class="text_img">
+            <img src="asset/img/timbre6.jpg" alt="timbre">
+            <div class="texte">
+                <p>LOT 3434</p>
+            </div>
+        </div>
+
+        <div class="text_img">
+            <img src="asset/img/timbre4.jpg" alt="timbre">
+            <div class="texte">
+                <p>LOT 4958</p>
+            </div>
+        </div>
+
+        <div class="text_img">
+            <img src="asset/img/timbre2.jpg" alt="timbre">
+            <div class="texte">
+                <p>LOT 7458</p>
+            </div>
+        </div>
+
+        <div class="text_img">
+            <img src="asset/img/timbre7.jpg" alt="timbre">
+            <div class="texte">
+                <p>LOT 0945</p>
+            </div>
+        </div>
+
+        <div class="text_img">
+            <img src="asset/img/timbre5.jpg" alt="timbre">
+            <div class="texte">
+                <p>LOT 8125</p>
+            </div>
+        </div>
+
+        <div class="text_img">
+            <img src="asset/img/timbresimone.jpg" alt="timbre">
+            <div class="texte">
+                <p>LOT 0902</p>
+            </div>
+        </div>
+        <div class="text_img">
+            <img src="asset/img/timbre3.jpg" alt="timbre">
+            <div class="texte">
+                <p>LOT 0852</p>
+            </div>
+        </div>
+
+    </div>
+    <a href="enchere/tout"><button class="btn mise btn_miser_maintenant">Pour miser, c'est ici!</button></a>
+</section>
+
+<!-- hero secondaire -->
+<section class="hero__secondaire__accueil">
+    <div>
+        <h2>Application mobile disponible dès maintenant </h2>
+        <button class="btn primaire">Télécharger</button>
+    </div>
+</section>
+
+<!--section présention-->
+<article>
+    <div class="Presentation">
+        <h2> Qui est Lord Stampee</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Molestias dolorem harum ratione soluta
+            facere nemo. <br>
+            Quae velit similique, praesentium adipisci tempore corrupti <br> libero sint quod! Odio perferendis
+            architecto ab quam.
+            Lorem ipsum dolor sit amet, <br> consectetur adipisicing elit. Nemo animi porro culpa dignissimos
+            maxime
+            repudiandae <br> quo,
+            facilis consequatur. Vero non doloribus corrupti <br> nostrum sequi id sunt ipsa! Quas, incidunt quae!
+        </p>
+        <img src="asset/img/logoStampee-2.png" alt="lord">
+    </div>
+</article>
+
+<section>
+    <div class="container2 ">
+        <div class="texte-container">
+            <h4>From Londres to Tokyo</h4><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deserunt dicta corporis repellat nemo architecto, quae, quaerat odit hic minima rerum unde. Voluptatum
+            rem nulla natus, perferendis totam cum eos aliquid.
+            Deserunt dicta corporis repellat nemo architecto, quae, quaerat odit hic minima rerum unde. Voluptatum
+            rem nulla natus, perferendis totam cum eos aliquid.
+        </div>
+        <div class="container__presentation__imgbckgd">
+            <h2>À travers le monde</h2>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container2">
+        <div class="container__presentation__imgbckgd2">
+            <h2>Transactions sécurisées</h2>
+        </div>
+        <div class="texte-container">
+            <h4>La securité avant tout</h4><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Deserunt dicta corporis repellat nemo architecto, quae, quaerat odit hic minima rerum unde. Voluptatum
+            rem nulla natus, perferendis totam cum eos aliquid.
+        </div>
+    </div>
+</section>
+
+<!-- hero secondaire -->
+<section class="img__gde">
+    <div>
+        <h2>Devenez membre </h2>
+        <button class="btn primaire"><a href="utilisateur/nouveau">inscription</a></button>
+    </div>
+</section>
+
+<!-- newslettre / formulaire d'Inscription-->
+<section class="newletter" >
+    <form data-js-form>
+        <h5 class="form-title">Infoslettre</h5>
+            <span id="erreur" style="color: red;"></span>
+                <input type="text" placeholder="Nom">
+                <input type="tel" placeholder="Prénom">
+                <input type="email" placeholder="courriel">
+            <button class="btn primaire" type="button">Soumettre</button>
+        </form>
+</section>
+
+{% endblock %}

@@ -1,0 +1,200 @@
+/* ----------------récupèration du css grille page catalogue */
+div.carteProduit {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 120px;
+    flex-wrap: wrap;
+   
+}
+
+.border{
+    background: none;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+body>section>div.containerProduit {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 40px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+body>section>div.containerProduit>div {
+    max-width: 40ch;
+}
+
+ body>section>div.containerProduit>div img {
+    height: 5rem;  
+    width: 80%;
+    object-fit: cover;
+} 
+
+
+div.carteProduit a h4 {
+    color: rgb(0, 0, 0);
+}
+
+div.carteProduit a:hover {
+    cursor:auto;
+
+}
+
+.ResumeTimbre a {
+    width: calc(100% - 40px);
+    min-height: 17.5em;
+    text-align: center;
+}
+
+.ResumeTimbre p {
+    margin-top: 10px;
+    color: #000;
+    font-size: 1rem;
+}
+
+.catalogue {
+    margin-top: 20px;
+}
+
+.carteProduit a {
+    color: black
+}
+
+/* ---------- 3 petites images dans la carte */
+
+.img__produit img {
+    max-width: 20ch;
+    row-gap: 20px;
+    margin: 10px;
+    border: black 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.img__produit {
+    max-width: 100ch;
+}
+
+.img__produit img:hover {
+    box-shadow: rgb(0, 0, 0) 0px 5px 15px;
+    transform: scale(1.1)
+}
+
+.carteProduit h3 {
+    border: red 2px solid;
+    line-height: 1.625;
+}
+
+/* ------------------- zoom image  reference :stackOverflow --------------------*/
+
+#img-zoomer-box {
+    max-width: 800px;
+    height: auto;
+    position: relative;
+    margin: 10px auto;
+}
+
+#img-1 {
+    width: 100%;
+    height: auto;
+}
+
+#img-zoomer-box:hover,
+#img-zoomer-box:active {
+    cursor: zoom-in;
+    display: block;
+}
+
+#img-zoomer-box:hover #img-2,
+#img-zoomer-box:active #img-2 {
+    opacity: 1;
+}
+
+#img-2 {
+    width: 340px;
+    height: 340px;
+    background: url('../img/timbresimone.jpg') no-repeat #FFF;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    border: 4px solid whitesmoke;
+    z-index: 99;
+    border-radius: 100%;
+    display: block;
+    transition: opacity .2s;
+}
+
+
+
+/*------------------ texte description ----------------*/
+
+.containerProduit p {
+    text-align: start;
+    line-height: 1.625;
+} 
+
+.text__timbre {
+    margin-top: 60px;
+    margin-bottom: 30px;
+   
+    padding: 20px;
+
+}
+
+
+/* --------------------------Grille témoignage ----------------------------*/
+
+.temoignage {
+    justify-content: start;
+    border-top: 1px solid rgba(0, 0, 0, .3);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.temoignage>div:first-child img {
+    border-radius: 50%;
+    width: 5rem;
+    object-fit: cover;
+    object-position: 100%;
+}
+
+.interaction__pied {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+.interaction__pied__champ{
+	padding: 10px;
+	border-radius: 20px;
+    background-color: whitesmoke;
+    border: none;
+	color: rgb(0, 0, 0);
+}
+
+.interaction__pied input {
+    margin-left: 10px;
+    min-width: 300px;
+}
+
+.interaction__pied__image-profil { 
+    border-radius: 50%;
+	height:30px;
+	width:30px;
+	object-fit: cover; 
+}
+
+.img__hero form{
+    justify-items: center;
+
+}

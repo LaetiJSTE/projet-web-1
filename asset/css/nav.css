@@ -1,0 +1,240 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.burger__menu {
+    /* menu hamburger */
+    display: none;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.menu-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.menu-utilisateur {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.icone__menu {
+    padding-left: 10px;
+}
+
+.Menu__enchere {
+    font-weight: bolder;
+    background-color: #f9f9f9;
+    padding: 5px;
+    color: #910717;
+    border: #910717 2px solid;
+}
+
+.Menu__enchere:hover {
+    color: #053c61;
+    border-color: #053c61;
+}
+
+.menu-utilisateur form input[type="search"] {
+    width: 30vw;
+    transition: width 0.5s ease;
+    border: #053c61 2px solid;
+
+}
+
+.menu-utilisateur form input[type="search"]:focus {
+    width: 50vw;
+    outline-color: var(--primaire);
+}
+
+.menu-utilisateur a {
+
+    display: flex;
+    align-items: center;
+    color: var(--txtSecondaire)
+}
+
+.menu-utilisateur a:last-child {
+    margin-left: 10px;
+}
+
+
+.menu-utilisateur a img {
+    width: 25px;
+    margin-right: 2px;
+}
+
+.menu-container nav {
+    padding: 10px 0;
+    width: 100%;
+    border-top: 2px solid var(--bordure-couleur);
+    border-bottom: 2px solid var(--bordure-couleur);
+    margin-top: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-content: flex-end;
+}
+
+nav a {
+    font-family: var(--font-famille-nav);
+    font-size: calc(var(--font-size-base) + var(--font-size-ratio) * 0.5vw);
+    padding: 1em 0;
+    margin-left: 20px;
+    color: var(--txtPrimaire);
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--txtSurvol);
+}
+
+/* hero catalogue*/
+.img__hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/hero2.jpg") no-repeat right center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    min-height: 400px;
+    max-height: 405px;
+    font-size: 30px;
+    font-family: var(--font-famille-titre);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+.img__hero form {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* hero 2  */
+.img__gde {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/bigimg.jpg") no-repeat right center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    min-height: 280px;
+    font-size: 30px;
+    font-family: var(--font-famille-titre);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.img__gde h2 {
+    padding-top: 100px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.titre {
+    margin-bottom: 30px;
+    /*  espacement de 50px entre titre */
+    background-color: rgb(236, 232, 232);
+    text-align: center;
+    padding: 10px;
+    color: var(--primaire);
+    text-transform: uppercase;
+}
+
+/* hero Fiche Produit  */
+.img__hero__ficheProduit {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/ficheProduit.jpg") no-repeat right center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    min-height: 400px;
+    max-height: 405px;
+    font-size: 30px;
+    font-family: var(--font-famille-titre);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.img__hero__ficheProduit form {
+    display: flex;
+    justify-content: center;
+}
+
+/* hero accueil  */
+.img__hero__accueil {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/heroaccueil.jpg") no-repeat right center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    min-height: 400px;
+    max-height: 405px;
+    font-size: 30px;
+    font-family: var(--font-famille-titre);
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+}
+
+.img__hero__accueil form {
+    display: flex;
+    justify-content: center;
+}
+.imgs__heros h2 {
+   padding-top: 120px;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* -----------dropdown du menu principal---------------------- */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: black;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content p:hover {
+    color: #910717;
+    text-decoration: underline;
+}

@@ -1,0 +1,169 @@
+/* -----------------galerie------------------------------ */
+body>section>div img {
+    height: 15rem;
+    padding: 1px;
+    object-fit: cover;
+    background-color:#053c61;
+}
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.mx-w {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galerie>div {
+    flex: auto;
+    margin: 0;
+    object-fit: fill;
+
+}
+
+.galerie img {
+    border-radius: 3px;
+}
+
+.galerie img:hover {
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
+}
+
+/* fluctuation des tailles d'image*/
+.galerie>div:nth-child(1) {
+    width: 650px;
+}
+
+.galerie>div:nth-child(3) {
+    width: 700px;
+}
+
+.galerie>div:nth-child(even) {
+    width: 400px;
+}
+
+section>h2 {
+    margin-bottom: 40px;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 3em;
+}
+
+.text_img {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+
+.texte p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgba(161, 8, 8, 0.7),rgba(161, 8, 8, 0.7));
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.texte p:hover{
+    background: white;
+    color:#910717;
+    
+}
+
+.galerie img:hover{
+    opacity: 0.4;
+}
+
+
+ /* ----------------- heros ------------------------------ */
+.hero__secondaire__accueil{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/mobile.jpg") no-repeat right center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    min-height: 300px;
+    font-size: 30px;
+    font-family: var(--font-famille-titre);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 120px;
+    color: white;
+    margin-bottom: 120px;
+}
+
+.hero__secondaire__accueil h2 {
+    padding-top: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+ /* ----------------- présentation ------------------------------ */	
+ article{
+    background-color:  rgb(236, 232, 232);;
+    margin: 40px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+body>section>div.container2 {
+    display: flex; 
+    justify-content: space-between;
+}
+
+body>section>div.container2>div {
+   width: calc(20% - 20px);
+}
+
+.texte-container{
+    font-size: 1em;
+    padding: 30px;
+    background-color: rgb(236, 232, 232);;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.container__presentation__imgbckgd{
+    padding:40px; 
+    color:#fff;
+    display: flex;
+    margin-right: 10px;
+    height: 150px;
+    background : linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url("../img/globe.jpg") no-repeat;
+    background-position:  50% 50%;  
+    border-radius: 5px;
+}
+
+
+.container__presentation__imgbckgd2{
+    padding:40px; 
+    color:#fff;
+    display: flex;
+    flex-grow: 2;
+    margin-left: 10px;
+    height: 150px;
+    background : url("../img/enchere.jpg") no-repeat; 
+    background-color: black;
+    background-position:  50% 60%; 
+    border-radius: 5px; 
+}
+
+

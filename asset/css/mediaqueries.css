@@ -1,0 +1,136 @@
+@media screen and (max-width: 700px) {
+
+
+  /* ------------------- navigation -------------------- */
+
+
+  .dropdown-content {
+    margin: 0;
+    min-width: 50%;
+  }
+
+  .burger__menu {
+    display: block;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 100%;
+    background-color: #ffffff;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+    border-right: #053c61 1px solid;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000000;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    text-decoration: underline;
+  }
+
+  .sidenav.active {
+    left: 0;
+  }
+
+  #closeBtn{
+    font-size: 50px;
+   cursor: pointer;
+  }
+
+  #closeBtn:hover{
+    color:  #910717;
+    scale: 1.5;
+    transition: 0.3s;
+  }
+
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+
+  }
+
+  .burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+
+  .Menu__enchere {
+    border: none;
+  }
+
+  .Menu__enchere:hover {
+    color: #910717;
+    font-size: 28px;
+    border: none;
+
+  }
+
+  .menu-utilisateur,
+  .menu-container {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    order: 2;
+  }
+
+
+  /* --------------------- formulaire ------------------------ */
+  .newletter {
+    display: grid;
+    justify-content: center;
+  }
+
+
+  /* ----------------- footer ------------------------------ */
+
+  .navFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+
+  /* ----------------- img section texte ------------------------------ */
+
+
+  /* retrait des img */
+
+  div.container__presentation__imgbckgd {
+    display: none;
+  }
+
+  div.container__presentation__imgbckgd2 {
+    display: none;
+  }
+
+
+}

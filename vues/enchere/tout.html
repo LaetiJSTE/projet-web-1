@@ -1,0 +1,69 @@
+{% extends "base.html" %} 
+{% block main %} 
+
+<!-- hero principale-->
+<section class="img__hero imgs__heros">
+   <div>
+      <h2>Catalogue des produits</h2>
+      <form method="post" action="enchere/recherche"><input type="search" placeholder="Recherche" name="recherche"></form>
+   </div>
+</section>
+
+  <!-- filtre recherche -->
+<section>
+   <h2 class="titre">Nos dernières trouvailles</h2>
+   <div class="trier">
+   <select name="" id="" class="trier" value ="trier par">
+      <option value="">Trier par</option>
+      <option value="">Prix</option>
+      <option value="">Date</option>
+      <option value="">Pertinence</option>
+   </select>
+</div>
+
+
+
+  <!-- catalogue / grille timbre -->
+   <div class="containerCatalogue resumeTimbre">
+
+      {% for timbre in timbres %}
+
+      <div class="carteCatalogue">
+         <a href="enchere/un?tmbe_id={{timbre.tmbe_id}}">
+            <img src="asset/imgBD/{{timbre.img_nom}}" alt="timbre">
+            <h4>{{timbre.tmbe_nom}}</h4>
+            <p> <h5>Lot N {{timbre.tmbe_id}}</h5><br>
+               Prix : {{timbre.echre_prix}}$ CAD <br>
+               Nombre d'enchère : {{timbre.echre_nombre}}</p>
+            <button class="btn primaire">Plus d'information</button>
+            <input type="hidden" name="tmbe_id" value="{{timbre.tmbe_id}}">
+         </a>
+     </div>
+
+
+     {% endfor %} 
+      
+   </div>
+</section>
+
+  <!-- hero secondaire -->
+<section class="img__gde">
+   <div>
+      <h2>Devenez membre </h2>
+      <button class="btn primaire">inscription</button>
+   </div>
+</section>
+
+  <!-- newslettre / formulaire d'Inscription-->
+
+   <section class="newletter" method="post" action="utilisateur/connecter" data-js-form>
+      <h5 class="form-title">Connexion</h5>
+      <form>
+         <input type="text"name="uti_courriel" placeholder="courriel" required>
+         <input type="password" placeholder="Mot de passe" name="uti_mdp"required>
+         <button class="btn primaire" type="button" type="submit" value="Connexion">Se connecter</button>
+      </form>
+   </section>
+
+</section>
+{% endblock %} 

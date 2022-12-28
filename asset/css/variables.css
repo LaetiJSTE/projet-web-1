@@ -1,0 +1,31 @@
+ /*Variables*/
+
+ :root{
+
+    /*Typo*/
+    --font-famille-titre: 'Playfair Display', serif;
+    --font-famille-texte: 'Source Sans Pro', sans-serif;
+    --font-famille-nav: 'Open Sans', sans-serif;
+
+    --font-size-base: 10px;
+    --font-size-ratio: 0.9;
+
+    --rem: calc(var(--font-size-base) + var(--font-size-ratio) * 1vw);
+
+   
+     /*Couleur*/
+    --primaire: #053c61;
+    --secondaire: #333333;
+    --claire: #ffffff;
+    --focus: #910717;
+
+    --txtPrimaire: #000;
+    --txtSecondaire: #666;
+    --txtClaire: #fff;
+    --txtSurvol:var(--focus);
+
+    /*Bordure*/
+    --bordure-rayon: 0.25rem;
+    --bordure-couleur: #ebedeb;
+  
+}

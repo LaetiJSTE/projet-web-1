@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block main %}
+
+<section class="newletter formCo enchereForm">
+
+    <form class='inscCo' data-js-form action="enchere/ajouterTimbre" enctype="multipart/form-data" method="post">
+
+        <h5 class="form-title">Ajout d'une enchère</h5><br>
+
+        Nom du timbre<input type="text" name="tmbe_nom"required>
+        Date de création du timbre<input type="text" name="tmbe_creation" required>
+        Pays d'origine<input type="text" name="tmbe_pays" required>
+        Couleur<input type="text" name="tmbe_couleurs" required>
+
+        État<select name="tmbe_conditions" id="" class="trier selectEnchere" value="trier par" required>
+            <option ></option>
+            <option value="tres bon">très bon</option>
+            <option value="bon">bon</option>
+            <option value="moyen">moyen</option>
+            <option value="mauvais">mauvais</option>
+        </select><br>
+
+        Dimensions (cm)<input type="text" placeholder="00 x 00 x 00" name="tmbe_dimensions" required>
+        Image(s) <input name="img_nom" type="file" accept=".jpg, .jpeg, .png" required>
+       
+
+        Certifié<select name="tmbe_certifie" id="" class="trier selectEnchere"  required>
+            <option ></option>
+            <option value="oui">oui</option>
+            <option value="non">non</option>
+        </select><br>
+
+        Prix de départ<input type="text" data-js-prix  name="echre_prix" required>
+        Date de debut<input type="text"  name="echre_dateDebut" required>
+        Date de fin<input type="text" name="echre_dateFin" required>
+
+        <button class="btn primaire" type="submit">ajouter</button><br>
+        <span id="erreur" style="color: red;"></span>
+
+    </form>
+
+
+</section>
+{% endblock %}

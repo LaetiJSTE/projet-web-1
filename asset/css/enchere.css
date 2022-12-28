@@ -1,0 +1,27 @@
+.enchere{
+    background: none;
+    padding: 20px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 40px;  
+    border-top: 2px solid  #053c61;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+div .enchere img{
+    width: 40%;
+    height: 5%;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.mes{
+    margin-top: 0px;
+}
+
+.mes h2{
+    margin-top: 0;
+}
